@@ -1,0 +1,59 @@
+.Footer {
+  margin-top: 60px;
+  padding: 50px 0 20px;
+  background: radial-gradient( circle at 50% 100%,rgba(100, 50, 180, 0.15), transparent 50%), #030610;
+  border-top: 1px solid rgba(157, 91, 255, 0.35);
+  color: white;
+}
+
+.FooterBrand h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.FooterBrand p {
+  color: #aaa;
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.FooterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FooterSection h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.FooterSection a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.FooterSection a:hover {
+  color: #9d5bff;
+}
+
+.FooterSocial {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FooterBottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.FooterBottom p {
+  color: #777;
+  font-size: 0.85rem;
+}

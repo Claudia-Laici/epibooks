@@ -1,0 +1,27 @@
+.AlertWelcome {
+  margin: 20px auto 0;
+  padding: 40px;
+  height: 100%;
+  background: linear-gradient(145deg, #151525, #0d0d1856);
+  border: 1px solid rgba(157, 91, 255, 0.35);
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.WelcomeTitle {
+  display: block;
+  color: #9d5bff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.AlertWelcome:hover {
+  border-color: rgba(157, 91, 255, 0.65);
+  box-shadow: 0 10px 30px rgba(157, 91, 255, 0.15);
+}

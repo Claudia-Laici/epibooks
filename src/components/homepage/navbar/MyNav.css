@@ -1,0 +1,20 @@
+.Nav {
+  background-color: #030610;
+  border-bottom: 1px solid rgba(157, 91, 255, 0.35);
+}
+
+.Nav .nav-link {
+  color: #fff;
+}
+
+.Nav .nav-link:hover {
+  color: #9d5bff;
+}
+
+.Nav .navbar-brand {
+  color: #fff;
+}
+
+.Nav .navbar-brand:hover {
+  color: #9d5bff;
+}
