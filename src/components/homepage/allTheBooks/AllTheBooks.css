@@ -15,7 +15,7 @@
 .BookCard {
   height: 100%;
   background: linear-gradient(145deg, #151525, #0d0d18);
-  border: 1px solid rgba(157, 91, 255, 0.35);
+  border: 2px solid rgba(157, 91, 255, 0.35);
   border-radius: 12px;
   overflow: hidden;
   color: white;
@@ -26,7 +26,7 @@
 }
 
 .BookCard:hover {
-  transform: translateY(-8px);
+  transform: translateY(-3px);
   border-color: #9d5bff;
   box-shadow:
     0 10px 30px rgba(120, 50, 255, 0.25),
@@ -64,5 +64,16 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-top: auto;
+}
+
+.InputForm {
+   border: 2px solid rgba(157, 91, 255, 0.35);
+}
+
+.InputForm:focus {
+  border-color: #9d5bff;
+  box-shadow:
+    0 10px 30px rgba(120, 50, 255, 0.25),
+    0 0 15px rgba(157, 91, 255, 0.15);
 }
 

@@ -1,0 +1,6 @@
+.BookCard.selected {
+  border-color: #9d5bff;
+  box-shadow:
+    0 10px 30px rgba(120, 50, 255, 0.25),
+    0 0 15px rgba(157, 91, 255, 0.15);
+}
