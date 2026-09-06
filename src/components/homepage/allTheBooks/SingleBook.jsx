@@ -1,34 +1,40 @@
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import "./SingleBook.css"
-
+import { Card, Button, Modal } from "react-bootstrap";
+import "./SingleBook.css";
+import CommentArea from "../commentArea/CommentArea";
 
 const SingleBook = ({ book }) => {
-  const [selected, setSelected] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <Card  className={`BookCard ${selected ? "selected" : ""}`}
-      onClick={() => setSelected(!selected)}>
+    <>
+      <Card className="BookCard">
+        <Card.Img
+          variant="top"
+          src={book.img}
+          alt={book.title}
+          className="book-image"
+        />
 
-      <Card.Img
-        variant="top"
-        src={book.img}
-        alt={book.title}
-      />
+        <Card.Body className="book-body">
+          <Card.Title className="book-title">{book.title}</Card.Title>
+          <Card.Text className="book-price">€ {book.price.toFixed(2)}</Card.Text>
 
-      <Card.Body>
+          <Button variant="outline-info" onClick={() => setShowModal(true)}>
+            Vedi recensioni
+          </Button>
+        </Card.Body>
+      </Card>
 
-        <Card.Title>
-          {book.title}
-        </Card.Title>
-
-        <Card.Text>
-          € {book.price.toFixed(2)}
-        </Card.Text>
-
-      </Card.Body>
-
-    </Card>
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered className="bookModal">
+        <Modal.Header closeButton>
+          <Modal.Title>{book.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CommentArea asin={book.asin} />
+        </Modal.Body>
+      </Modal>
+    </>
   );
 };
 

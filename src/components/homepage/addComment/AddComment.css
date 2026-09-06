@@ -1,0 +1,29 @@
+.CommentForm {
+  padding-top: 10px;
+  border-top: 1px solid #ddd8d0;
+}
+
+.CommentInput {
+  background-color: #f7f4ef;
+  border: 1px solid #ddd8d0;
+  color: #2f3e46;
+}
+
+.CommentInput::placeholder {
+  color: #c9c2b8;
+}
+
+.CommentInput:focus {
+  border-color: #7c8c78;
+  box-shadow: 0 0 5px rgba(124, 140, 120, 0.2);
+}
+
+.CommentButton {
+  border-color: #7c8c78;
+  color: #7c8c78;
+}
+
+.CommentButton:hover {
+  background-color: #7c8c78;
+  color: #f7f4ef;
+}

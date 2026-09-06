@@ -1,8 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import SearchBar from "../searchBar/SearchBar";
 import "./MyNav.css";
+
 const MyNav = () => {
+
   return (
     <Navbar expand="lg" className="Nav">
       <Container>
@@ -14,6 +17,7 @@ const MyNav = () => {
             <Nav.Link href="#">About</Nav.Link>
             <Nav.Link href="#">Browse</Nav.Link>
           </Nav>
+            <SearchBar />
         </Navbar.Collapse>
       </Container>
     </Navbar>
