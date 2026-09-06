@@ -1,59 +1,9 @@
 .BookCard.selected {
-  border-color: #9d5bff;
-  box-shadow:
-    0 10px 30px rgba(120, 50, 255, 0.25),
-    0 0 15px rgba(157, 91, 255, 0.15);
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
 }
 
-.BookCard:hover,
-.BookCard.selected {
+.BookCard:hover {
   border-color: #00d9ff;
   box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
-}
-
-.BookCard .btn {
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-}
-
-.comment-panel {
-  padding: 15px;
-}
-
-.comment-header {
-  border-bottom: 1px solid #334155;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-}
-
-.comment-label {
-  color: #00d9ff;
-  font-family: monospace;
-  font-size: 0.7rem;
-}
-
-.comment-header h5 {
-  margin: 5px 0 0;
-  text-transform: uppercase;
-}
-
-.bookModal .modal-content {
-  background: #f7f4ef;
-  color: #2f3e46;
-  border: 1px solid #7c8c78;
-  border-radius: 12px;
-}
-
-.bookModal .modal-header {
-  border-bottom: 1px solid #334155;
-}
-
-.bookModal .modal-title {
-  color: #7c8c78;
-}
-
-.bookModal .modal-body {
-  background-color: #080b14;
 }

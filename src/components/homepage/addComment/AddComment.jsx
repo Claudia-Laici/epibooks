@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import "./AddComment.css";
 
 const AddComment = ({ asin, getComments }) => {
   const [inputComment, setInputComment] = useState({
@@ -8,8 +9,18 @@ const AddComment = ({ asin, getComments }) => {
     elementId: asin,
   });
 
+  useEffect(() => {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+    setInputComment({
+      comment: "",
+      rate: "1",
+      elementId: asin,
+    });
+  }, [asin]);
+
   const onChangeInput = (e) => {
     const { name, value } = e.target;
+
     setInputComment({
       ...inputComment,
       [name]: value,
@@ -18,7 +29,9 @@ const AddComment = ({ asin, getComments }) => {
 
   const onSubmitComment = async (e) => {
     e.preventDefault();
-    const apiToken = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTYyNzAyYzg5ZGIxZTAwMTU1ZGEzMzMiLCJpYXQiOjE3ODgxNzg3MDksImV4cCI6MTc4OTM4ODMwOX0.IJOwXLoFebhX5D__QQwvOYBYiw0tZU7-I5TZ5P6llu0`;
+
+    const apiToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTYyNzAyYzg5ZGIxZTAwMTU1ZGEzMzMiLCJpYXQiOjE3ODg3MTA3MTksImV4cCI6MTc4OTkyMDMxOX0.yz7sJFGvfiSYqAn6DmMTPQnTQ3sLd7choto0Xz1Tugo";
 
     try {
       const response = await fetch(
@@ -30,14 +43,15 @@ const AddComment = ({ asin, getComments }) => {
             Authorization: `Bearer ${apiToken}`,
           },
           body: JSON.stringify(inputComment),
-        },
+        }
       );
 
       if (response.ok) {
         await getComments();
+
         setInputComment({
           comment: "",
-          rate: "",
+          rate: "1",
           elementId: asin,
         });
       }

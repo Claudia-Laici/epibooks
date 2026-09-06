@@ -1,29 +1,28 @@
-.CommentForm {
-  padding-top: 10px;
-  border-top: 1px solid #ddd8d0;
-}
-
 .CommentInput {
-  background-color: #f7f4ef;
-  border: 1px solid #ddd8d0;
-  color: #2f3e46;
+  background-color: #080b14;
+  border: 1px solid #334155;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .CommentInput::placeholder {
-  color: #c9c2b8;
+  color: #64748b;
+}
+
+.CommentInput:hover {
+  border-color: #475569;
 }
 
 .CommentInput:focus {
-  border-color: #7c8c78;
-  box-shadow: 0 0 5px rgba(124, 140, 120, 0.2);
+  background-color: #080b14;
+  border-color: #00d9ff;
+  color: #ffffff;
+  outline: none;
+  box-shadow:
+    0 0 5px rgba(0, 217, 255, 0.3),
+    inset 0 0 5px rgba(0, 217, 255, 0.05);
 }
 
-.CommentButton {
-  border-color: #7c8c78;
-  color: #7c8c78;
-}
-
-.CommentButton:hover {
-  background-color: #7c8c78;
-  color: #f7f4ef;
-}

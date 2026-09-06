@@ -23,19 +23,29 @@ const SingleComment = ({ comment, getComments }) => {
   };
 
   return (
-    <>
-    <CardBody>
-        <CardText className="SingleComment">
-            <Badge>Recensione</Badge><br/>{comment.comment}
-        </CardText>
-        <CardText className="CommentMeta">
-            <Badge>Valutazione</Badge><br/>{comment.rate}
-        </CardText>
-        <Button  onClick={onDeleteComment} className="DeleteComment">
-            Elimina
-        </Button>
+    <CardBody className="SingleComment">
+      <CardText>
+        <Badge>Recensione</Badge>
+        <br />
+        {comment.comment}
+      </CardText>
+
+      <CardText className="AuthorComment">
+        <Badge>Autore</Badge>
+        <br />
+        {comment.author}
+      </CardText>
+
+      <CardText className="CommentMeta">
+        <Badge>Valutazione</Badge>
+        <br />
+        {comment.rate}
+      </CardText>
+
+      <Button onClick={onDeleteComment} className="DeleteComment">
+        Elimina
+      </Button>
     </CardBody>
-    </>
   );
 };
 

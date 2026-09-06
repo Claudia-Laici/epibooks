@@ -1,0 +1,43 @@
+.CommentArea {
+  background: linear-gradient(145deg, #151525, #0d0d18);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  color: #ffffff;
+  min-height: 400px;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.CommentHeader {
+  border-bottom: 1px solid #334155;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
+
+.CommentLabel {
+  color: #00d9ff;
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.CommentHeader h5 {
+  margin: 5px 0 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.CommentEmpty {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.CommentEmpty p {
+  margin: 0;
+}
