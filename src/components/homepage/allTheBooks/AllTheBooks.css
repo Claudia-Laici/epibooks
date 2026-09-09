@@ -66,5 +66,20 @@
   margin-top: auto;
 }
 
+.BtnMore {
+  font-size: 1rem;
+  padding: 0.25rem 0.6rem;
+  background-color: transparent;
+  border: 1px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.BtnMore:hover {
+  background-color: #00d9ff;
+  color: #0a0a0f;
+}
+
 
 

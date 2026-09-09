@@ -5,7 +5,7 @@ export const BooksContext = createContext();
 
 export const BooksProvider = ({ children }) => {
   const [booksData, setBooksData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
   const getBooks = async () => {

@@ -1,4 +1,5 @@
 import { Card } from "react-bootstrap";
+import { Link } from "react-router";
 import "./SingleBook.css";
 
 const SingleBook = ({ book, selected, onBookClick }) => {
@@ -14,14 +15,18 @@ const SingleBook = ({ book, selected, onBookClick }) => {
         className="book-image"
       />
 
-      <Card.Body className="book-body">
-        <Card.Title className="book-title">
-          {book.title}
-        </Card.Title>
+      <Card.Body>
+        <Card.Title>{book.title}</Card.Title>
 
-        <Card.Text className="book-price">
-          € {book.price.toFixed(2)}
-        </Card.Text>
+        <Card.Text>€ {book.price.toFixed(2)}</Card.Text>
+
+        <Link
+          className="btn SingleBookButton"
+          to={`/book/${book.asin}`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          Dettaglio
+        </Link>
       </Card.Body>
     </Card>
   );

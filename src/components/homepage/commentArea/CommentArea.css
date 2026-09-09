@@ -4,9 +4,7 @@
   border-radius: 12px;
   padding: 20px;
   color: #ffffff;
-  min-height: 400px;
-  height: 100%;
-  margin-top: 50px;
+  min-height: 100%;
 }
 
 .CommentHeader {

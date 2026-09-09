@@ -23,7 +23,7 @@ const SearchBar = () => {
         </Col>
 
         <Col xs="auto">
-          <Button type="submit">
+          <Button className="BtnSearch" type="submit">
             Search
           </Button>
         </Col>

@@ -42,7 +42,7 @@ const SingleComment = ({ comment, getComments }) => {
         {comment.rate}
       </CardText>
 
-      <Button onClick={onDeleteComment} className="DeleteComment">
+      <Button onClick={onDeleteComment} className="BtnDeleteComment">
         Elimina
       </Button>
     </CardBody>

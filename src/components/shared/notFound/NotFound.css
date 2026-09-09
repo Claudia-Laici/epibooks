@@ -1,0 +1,12 @@
+.BtnBackToHome {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #fdfdfd;
+  font-size: 1rem;
+}
+
+.BtnBackToHome:hover {
+  border-color: #00d9ff;
+  color: #00d9ff;
+  background: transparent;
+}

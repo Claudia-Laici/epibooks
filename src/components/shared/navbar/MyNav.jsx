@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import SearchBar from "../searchBar/SearchBar";
+import SearchBar from "../../homepage/searchBar/SearchBar";
 import "./MyNav.css";
 
 const MyNav = () => {

@@ -1,0 +1,57 @@
+.LoadingIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.BookSpinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.BookSpinnerPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #00d9ff;
+  animation: BookSpin 1.2s linear infinite;
+}
+
+.BookSpinnerPage:nth-child(2) {
+  border-top-color: transparent;
+  border-right-color: #9d5bff;
+  animation-duration: 1.6s;
+  animation-direction: reverse;
+}
+
+.BookSpinnerPage:nth-child(3) {
+  border-top-color: transparent;
+  border-bottom-color: #6366f1;
+  animation-duration: 2s;
+}
+
+@keyframes BookSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.LoadingIndicatorText {
+  font-size: 0.85rem;
+  color: #00d9ff;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

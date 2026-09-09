@@ -1,0 +1,63 @@
+.Nav {
+  background-color: #030610;
+  border-bottom: 1px solid rgba(157, 91, 255, 0.35);
+}
+
+.Nav .nav-link {
+  color: #fff;
+}
+
+.Nav .nav-link:hover {
+  color: #9d5bff;
+}
+
+.Nav .navbar-brand {
+  color: #fff;
+}
+
+.Nav .navbar-brand:hover {
+  color: #9d5bff;
+}
+
+.InputForm {
+  width: 250px;
+  background-color: #080b14;
+  border: 1px solid #334155;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.InputForm::placeholder {
+  color: #64748b;
+}
+
+.InputForm:hover {
+  border-color: #475569;
+}
+
+.InputForm:focus {
+   background-color: #080b14;
+  border-color: #00d9ff;
+  color: #ffffff;
+  outline: none;
+  box-shadow:
+    0 0 5px rgba(0, 217, 255, 0.3),
+    inset 0 0 5px rgba(0, 217, 255, 0.05);
+}
+
+.BtnSearch {
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.BtnSearch:hover {
+  background-color: #00d9ff;
+  color: #0a0a0f;
+}

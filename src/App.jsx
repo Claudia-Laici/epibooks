@@ -1,21 +1,29 @@
 import "./App.css";
-import MyNav from "./components/homepage/navbar/MyNav";
-import MyFooter from "./components/homepage/footer/MyFooter";
-import Welcome from "./components/homepage/welcome/Welcome";
-import AllTheBooks from "./components/homepage/allTheBooks/AllTheBooks";
-import { BooksProvider } from "./contexts/BooksContext";
-import { SearchBookProvider } from "./contexts/SearchBookContext";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Homepage from "./pages/homePage/Homepage";
+import BookDetails from "./components/shared/bookDetails/BookDetails";
+import NotFound from "./components/shared/notFound/NotFound";
+
 const App = () => {
- 
   return (
-    <BooksProvider>
-      <SearchBookProvider>
-        <MyNav />
-        <Welcome />
-        <AllTheBooks />
-         <MyFooter />
-      </SearchBookProvider>
-    </BooksProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route
+        index
+        path='/'
+        element={<Homepage />}
+        />
+          <Route
+        path='/book/:asin'
+        element={<BookDetails />}
+        />
+          <Route
+        path='*'
+        element={<NotFound />}
+        />
+        
+      </Routes>
+    </BrowserRouter>
   );
 };
 

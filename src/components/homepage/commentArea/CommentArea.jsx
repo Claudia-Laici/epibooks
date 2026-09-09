@@ -1,48 +1,26 @@
-import { useEffect, useState } from "react";
 import CommentList from "../commentList/CommentList";
 import AddComment from "../addComment/AddComment";
+import LoadingIndicator from "../../shared/loadingIndicator/LoadingIndicator";
+import { useFetch } from "../../../hooks/useFetch";
 import "./CommentArea.css";
 
+const apiToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTYyNzAyYzg5ZGIxZTAwMTU1ZGEzMzMiLCJpYXQiOjE3ODg3MTA3MTksImV4cCI6MTc4OTkyMDMxOX0.yz7sJFGvfiSYqAn6DmMTPQnTQ3sLd7choto0Xz1Tugo";
+
 const CommentArea = ({ asin }) => {
-  const [comments, setComments] = useState([]);
-
-  const getComments = async () => {
-    if (!asin) return;
-
-    console.log("GET COMMENTI PER ASIN:", asin);
-
-    const apiUrl = `https://striveschool-api.herokuapp.com/api/books/${asin}/comments/`;
-
-    const apiToken =
-      "IL_TUO_TOKEN";
-
-    try {
-      const response = await fetch(apiUrl, {
-        headers: {
-          Authorization: `Bearer ${apiToken}`,
-        },
-      });
-
-      console.log("Status GET:", response.status);
-
-      const data = await response.json();
-
-      console.log("Dati ricevuti:", data);
-
-      setComments(data);
-    } catch (e) {
-      console.log("Errore fetch:", e);
+  const {
+    isLoading,
+    data: comments,
+    error,
+    fetchData: getComments,
+  } = useFetch(
+    asin ? `https://striveschool-api.herokuapp.com/api/books/${asin}/comments/` : null,
+    {
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+      },
     }
-  };
-
-  useEffect(() => {
-    if (asin) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      getComments();
-    } else {
-      setComments([]);
-    }
-  }, [asin]);
+  );
 
   return (
     <div className="CommentArea">
@@ -53,15 +31,17 @@ const CommentArea = ({ asin }) => {
             <h5>Recensioni</h5>
           </div>
 
-          <CommentList
-            comments={comments}
-            getComments={getComments}
-          />
+          {isLoading && <LoadingIndicator />}
 
-          <AddComment
-            asin={asin}
-            getComments={getComments}
-          />
+          {!isLoading && !error && (
+            <>
+              <CommentList
+                comments={comments || []}
+                getComments={getComments}
+              />
+              <AddComment asin={asin} getComments={getComments} />
+            </>
+          )}
         </>
       ) : (
         <div className="CommentEmpty">

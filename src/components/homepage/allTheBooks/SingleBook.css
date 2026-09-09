@@ -1,9 +1,0 @@
-.BookCard.selected {
-  border-color: #00d9ff;
-  box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
-}
-
-.BookCard:hover {
-  border-color: #00d9ff;
-  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
-}

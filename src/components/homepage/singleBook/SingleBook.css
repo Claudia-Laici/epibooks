@@ -1,0 +1,24 @@
+.BookCard.selected {
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
+}
+
+.BookCard:hover {
+  border-color: #00d9ff;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+.SingleBookButton {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background-color: transparent;
+  border: 1px solid #00d9ff;
+  color: #00d9ff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.SingleBookButton:hover {
+  background-color: #00d9ff;
+  color: #0a0a0f;
+}
