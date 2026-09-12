@@ -2,27 +2,30 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router";
 import "./SingleBook.css";
 
-const SingleBook = ({ book, selected, onBookClick }) => {
+const SingleBook = ({ img, title, category, price, asin, selected, onBookClick }) => {
   return (
     <Card
-      className={`BookCard ${selected === book.asin ? "selected" : ""}`}
-      onClick={() => onBookClick(book.asin)}
+      data-testid="BookCard"
+      className={`BookCard ${selected === asin ? "selected" : ""}`}
+      onClick={() => onBookClick(asin)}
     >
       <Card.Img
         variant="top"
-        src={book.img}
-        alt={book.title}
+        src={img}
+        alt={title}
         className="book-image"
       />
 
       <Card.Body>
-        <Card.Title>{book.title}</Card.Title>
+        <Card.Title>{title}</Card.Title>
 
-        <Card.Text>€ {book.price.toFixed(2)}</Card.Text>
+        <Card.Text>{category}</Card.Text>
+
+        <Card.Text>{`€ ${price.toFixed(2)}`}</Card.Text>
 
         <Link
           className="btn SingleBookButton"
-          to={`/book/${book.asin}`}
+          to={`/book/${asin}`}
           onClick={(e) => e.stopPropagation()}
         >
           Dettaglio

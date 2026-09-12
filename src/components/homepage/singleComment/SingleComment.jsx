@@ -23,7 +23,8 @@ const SingleComment = ({ comment, getComments }) => {
   };
 
   return (
-    <CardBody className="SingleComment">
+    <CardBody className="SingleComment"
+     data-testid="SingleComment">
       <CardText>
         <Badge>Recensione</Badge>
         <br />

@@ -1,44 +1,32 @@
 .BookDetails {
-  padding-top: 50px;
-  padding-bottom: 60px;
+  padding-top: 60px;
+  min-height: 70vh;
 }
 
 .BookDetailsCard {
-  max-width: 100vh;
-  height: 100vh;
-  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
   background: linear-gradient(145deg, #151525, #0d0d18);
   border: 1px solid rgba(157, 91, 255, 0.3);
   border-radius: 12px;
 }
 
+.BookDetailsImage {
+  text-align: center;
+}
+
 .BookDetailsImage img {
+  width: 100%;
   max-width: 400px;
-  max-height: 500px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .BookDetailsInfo {
-    margin-top: 50px;
+  margin-top: 30px;
   color: white;
-}
-
-.BookDetailsCategory {
-  color: #b98cff;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-
-.BookDetailsInfo h1 {
-  margin: 10px 0 20px;
-  font-size: 2rem;
-}
-
-.BookDetailsPrice {
-  color: #9d5bff;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 

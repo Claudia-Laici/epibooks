@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
-import SingleBook from "../singleBook/SingleBook";
+import SingleBook from "../../homePage/singleBook/SingleBook";
 import { useContext, useState, useEffect } from "react";
 import { SearchBookContext } from "../../../contexts/SearchBookContext";
 import CommentArea from "../../homePage/commentArea/CommentArea";
@@ -49,7 +49,7 @@ const AllTheBooks = () => {
                   {booksToShow.map((book) => (
                     <Col key={book.asin} xs={12} md={4} lg={3} xl={4}>
                       <SingleBook
-                        book={book}
+                        {...book}
                         selected={selected}
                         onBookClick={handleBookClick}
                       />
